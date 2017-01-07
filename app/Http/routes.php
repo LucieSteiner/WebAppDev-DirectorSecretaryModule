@@ -11,6 +11,8 @@
 |
 */
 
+use App\TrialBalanceEntry;
+
 Route::get('/', function()
 {
 	return View::make('home');
@@ -18,7 +20,10 @@ Route::get('/', function()
 
 Route::get('/trial_balance', function()
 {
-	return View::make('trial_balance');
+	$entries = TrialBalanceEntry::select('entry_time as Date','accounts.name as Account','category as Category','amount as Amount')->join('accounts', 'trialBalanceEntries.account_id', '=', 'accounts.id')->get();
+	return View::make('trial_balance', [
+		'entries' => $entries
+	]);
 });
 Route::get('/reports', function()
 {

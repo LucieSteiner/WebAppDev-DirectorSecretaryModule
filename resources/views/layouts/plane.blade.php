@@ -12,6 +12,10 @@
 	<meta content="" name="description"/>
 	<meta content="" name="author"/>
 
+	<link type="text/css" rel="stylesheet" href="{{ asset("css/jsgrid.min.css") }}" />
+	<link type="text/css" rel="stylesheet" href="{{ asset("css/jsgrid-theme.min.css") }}" />
+	<script src="{{ asset("js/jquery-3.1.1.js") }}"></script>
+	<script type="text/javascript" src="{{ asset("js/jsgrid.min.js") }}"></script>
 	<link rel="stylesheet" href="{{ asset("assets/stylesheets/styles.css") }}" />
 </head>
 <body>
