@@ -12,11 +12,13 @@
 ### Current State ###
 
 - Dashboard and general structure of the application (module) finished
-- Database migrations finished (ERD diagram done)
+- Database migrations finished 
+- Models almost finished (come relationships to add)
+- Seeder classes finished
+- Trial Balance page finished (no editing)
 
 ### TODO ###
 
-- Create Models
-- Write the views for Reports, Accounts, Messages and Trial Balance
+- Write the views for Reports, Accounts and Messages
 - Add needed routes
 - Add content to the dashboard
