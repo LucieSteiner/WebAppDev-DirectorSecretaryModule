@@ -11,6 +11,7 @@
 |
 */
 
+use App\Account;
 use App\TrialBalanceEntry;
 
 Route::get('/', function()
@@ -31,7 +32,10 @@ Route::get('/reports', function()
 });
 Route::get('/accounts', function()
 {
-	return View::make('accounts');
+	$accounts = Account::get();
+	return View::make('accounts', [
+		'accounts' => $accounts
+	]);
 });
 Route::get('/messages', function()
 {
