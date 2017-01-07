@@ -12,6 +12,7 @@
 */
 
 use App\Account;
+use App\Message;
 use App\TrialBalanceEntry;
 
 Route::get('/', function()
@@ -39,5 +40,20 @@ Route::get('/accounts', function()
 });
 Route::get('/messages', function()
 {
-	return View::make('messages');
+	//This part should use the identification mechanism. The username should be stored in the session.
+	$messages = Message::select('messages.id as id_message', 'subject', 'body', 'from', 'to')->with('sender')->where('users.name','John')->join('users','messages.to','=','users.id')->get();
+	return View::make('messages', [
+		'messages' => $messages,
+		'id' => 0
+	]);
+});
+Route::get('/messages/{id}', function($id)
+{
+	//This part should use the identification mechanism. The username should be stored in the session.
+	$messages = Message::select('messages.id as id_message', 'subject', 'body', 'from', 'to')->with('sender')->where('users.name','John')->join('users','messages.to','=','users.id')->get();
+
+	return View::make('messages', [
+		'messages' => $messages,
+		'id' => $id
+	]);
 });
