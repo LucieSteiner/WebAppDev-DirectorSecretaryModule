@@ -13,12 +13,14 @@
 
 - Dashboard and general structure of the application (module) finished
 - Database migrations finished 
-- Models almost finished (come relationships to add)
+- Models finished
 - Seeder classes finished
 - Trial Balance page finished (no editing)
+- Accounts page finished
+- Messages page in progress (display of messages, but no writing)
 
 ### TODO ###
 
-- Write the views for Reports, Accounts and Messages
+- Write the views for Reports and Messages
 - Add needed routes
 - Add content to the dashboard
