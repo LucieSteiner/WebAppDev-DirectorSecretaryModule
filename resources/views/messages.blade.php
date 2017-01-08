@@ -41,7 +41,26 @@
 
     </div>
     <div class="col-sm-3">
-        <p> New Message</p>
+        <h3>New Message</h3>
+        <form role="form">
+            <div class="form-group">
+                <label>To</label>
+                <select class="form-control">
+                    @foreach($users as $user)
+                        <option>{{$user->name}}</option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Subject</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Body</label>
+                <textarea class="form-control" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
     </div>
 
 @stop
